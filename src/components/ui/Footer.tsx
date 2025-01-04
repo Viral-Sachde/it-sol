@@ -14,7 +14,7 @@ const Footer = () => {
                         <div>
                             <h2 className="text-sm uppercase tracking-wider">Contact Us</h2>
                             <h3 className="text-3xl font-light mt-4">
-                                Let's <span className="text-white font-medium">march</span> towards
+                                Let&apos;s <span className="text-white font-medium">march</span> towards
                                 absolute results, <span className="text-white font-medium"><br /> at lightning speed.</span>
                             </h3>
                         </div>

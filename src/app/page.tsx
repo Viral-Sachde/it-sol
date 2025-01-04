@@ -5,7 +5,7 @@ import { ThemeToggle } from "@/components/ui/theme-toggle"
 import Header from "@/components/ui/Header"
 import Footer from "@/components/ui/Footer"
 import Hero from "@/components/ui/Hero"
-import { Qna } from "@/components/ui/qna"
+import { Qna } from "@/components/ui/Qna"
 
 export default function Page() {
   return (
@@ -26,7 +26,7 @@ export default function Page() {
               </div>
               <div>
                 <h3 className="text-3xl font-light mb-4">
-                  Photography <span className="text-gray-500">is driven by a deep passion for</span> capturing life's{" "}
+                  Photography <span className="text-gray-500">is driven by a deep passion for</span> capturing life&apos;s{" "}
                   most <span className="text-gray-500">precious moments</span> with artistry and a touch of magic
                 </h3>
                 <Button variant="outline" className="text-white border-white mt-6">
