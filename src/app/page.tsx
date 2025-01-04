@@ -1,101 +1,151 @@
-import Image from "next/image";
+import { Button } from "@/components/ui/button"
+import { ChevronRight } from 'lucide-react'
+import Image from "next/image"
+import { ThemeToggle } from "@/components/ui/theme-toggle"
+import Header from "@/components/ui/Header"
+import Footer from "@/components/ui/Footer"
+import Hero from "@/components/ui/Hero"
+import { Qna } from "@/components/ui/qna"
 
-export default function Home() {
+export default function Page() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <main className="min-h-screen text-white">
+      <Header />
+      {/* Hero Section */}
+      <Hero />
+      <div className=" ">
+        {/* About Section */}
+        <section className="py-24 bg-zinc-900">
+          <div className="container mx-auto px-4">
+            <div className="grid md:grid-cols-2 gap-12">
+              <div>
+                <h2 className="text-sm uppercase tracking-wider">About Us</h2>
+                <p className="mt-4 text-gray-400 text-sm max-w-xs">
+                  We believe in being the best possible version of ourselves. Pushing boundaries, Setting up Records and being a kind of Human Experience.
+                </p>
+              </div>
+              <div>
+                <h3 className="text-3xl font-light mb-4">
+                  Photography <span className="text-gray-500">is driven by a deep passion for</span> capturing life's{" "}
+                  most <span className="text-gray-500">precious moments</span> with artistry and a touch of magic
+                </h3>
+                <Button variant="outline" className="text-white border-white mt-6">
+                  LEARN MORE <ChevronRight className="ml-2 h-4 w-4" />
+                </Button>
+              </div>
+            </div>
+          </div>
+        </section>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
-  );
+        {/* Portfolio Section */}
+        <section className="py-24 bg-zinc-800">
+          <div className="container mx-auto px-4">
+            <div className="grid md:grid-cols-2 gap-12">
+              <div>
+                <h2 className="text-sm uppercase tracking-wider">Our Expertise</h2>
+                <h3 className="text-3xl font-light mt-4">
+                  When moments captured every dreams crafted into beautiful reality
+                </h3>
+              </div>
+              <div className="space-y-2 text-right">
+                <p className="text-gray-400">Landscape</p>
+                <p className="text-gray-400">Wildlife</p>
+                <p className="text-gray-400">Architectural</p>
+                <p className="text-gray-400">Portrait</p>
+              </div>
+            </div>
+            <div className="mt-12">
+              <Image
+                src="/placeholder.svg?height=600&width=1200"
+                alt="Mountain landscape"
+                width={1200}
+                height={600}
+                className="rounded-lg"
+              />
+              <div className="mt-4 flex justify-between items-center">
+                <div>
+                  <h4 className="font-medium">Chasing Clouds at Mont Blanc, Europe</h4>
+                  <p className="text-sm text-gray-400">Mont Blanc, France</p>
+                </div>
+                <div className="flex gap-2">
+                  <Button variant="outline" size="icon" className="rounded-full">
+                    <ChevronRight className="h-4 w-4" />
+                  </Button>
+                  <Button variant="outline" size="icon" className="rounded-full">
+                    <ChevronRight className="h-4 w-4" />
+                  </Button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Gallery Section */}
+        <section className="py-24 bg-zinc-900">
+          <div className="container mx-auto px-4">
+            <div className="mb-12">
+              <h2 className="text-sm uppercase tracking-wider">2024</h2>
+              <div className="flex justify-between items-end mt-4">
+                <h3 className="text-3xl font-light">
+                  Explore <span className="text-gray-500">the artistry and precision behind</span> our portfolio{" "}
+                  <span className="text-gray-500">of timeless photography</span>
+                </h3>
+                <Button variant="outline" className="text-white border-white">
+                  EXPLORE MORE <ChevronRight className="ml-2 h-4 w-4" />
+                </Button>
+              </div>
+            </div>
+            <div className="grid md:grid-cols-3 gap-6">
+              {[
+                {
+                  title: "Majestic Creatures of the African Savanna",
+                  tags: ["Wildlife Portfolio", "Nature", "Africa"],
+                },
+                {
+                  title: "A Temple's Serene Silhouette",
+                  tags: ["Architectural", "Japan"],
+                },
+                {
+                  title: "Moments Framed in Portraits",
+                  tags: ["Portrait", "People"],
+                },
+              ].map((item, index) => (
+                <div key={index} className="group relative">
+                  <Image
+                    src="/placeholder.svg?height=400&width=600"
+                    alt={item.title}
+                    width={600}
+                    height={400}
+                    className="rounded-lg"
+                  />
+                  <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity rounded-lg p-6 flex flex-col justify-between">
+                    <div className="flex flex-wrap gap-2">
+                      {item.tags.map((tag, tagIndex) => (
+                        <span key={tagIndex} className="bg-white/20 px-3 py-1 rounded-full text-sm">
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                    <div>
+                      <h4 className="text-xl font-medium mb-4">{item.title}</h4>
+                      <Button variant="outline" className="text-white border-white">
+                        MORE DETAILS <ChevronRight className="ml-2 h-4 w-4" />
+                      </Button>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* qna*/}
+        <Qna />
+        {/* Footer */}
+        <Footer />      <ThemeToggle />
+
+      </div>
+    </main>
+  )
 }
+
